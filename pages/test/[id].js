@@ -1,6 +1,7 @@
 export async function getStaticProps({ params }) {
   const { id } = params;
   return {
+    revalidate: 60,
     props: {
       id,
     },
